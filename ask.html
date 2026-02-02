@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Question</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="hearts"></div>
+
+  <div class="yesOverlay" id="yesOverlay"></div>
+  <div class="banner" id="banner">Locked in. Valentine confirmed.</div>
+
+  <div class="wrap">
+    <header class="nav">
+      <div class="brand">
+        <div class="title">Julissa + Manuel</div>
+        <div class="sub">This is the part I’ve been thinking about</div>
+      </div>
+      <nav class="navlinks">
+        <a href="index.html">I love you</a>
+        <a class="active" href="ask.html">Ask</a>
+      </nav>
+    </header>
+
+    <main class="page">
+      <section class="card">
+        <div class="card-inner">
+          <div class="grid">
+
+            <!-- LEFT: TEXT -->
+            <div>
+              <div class="kicker">The question</div>
+              <h1 class="headline">Baby</h1>
+
+              <p>I thought happiness started with H. Why does mine start with U?</p>
+
+              <h2>Will you be my Valentine?</h2>
+
+              <div class="actions">
+                <button class="btn primary" id="yesBtn" type="button">Yes</button>
+                <button class="btn ghost" id="noBtn" type="button">No</button>
+              </div>
+
+              <div class="notice" id="finalMsg">
+                That answer means everything to me. I’m really happy it’s you.
+                <div class="typewriter" id="typeLine"></div>
+              </div>
+            </div>
+
+            <!-- RIGHT: PHOTO -->
+            <aside class="side">
+              <div class="kicker">Us</div>
+              <div class="photo" style="margin-top:10px;">
+                <img src="ask.jpg" alt="Julissa and Manuel">
+              </div>
+              <div class="small">
+                It will forever be me and you vs the world
+              </div>
+            </aside>
+
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    Valentine.enableSpotlight();
+    Valentine.spawnFloatingHearts(18);
+    Valentine.attachRunawayNo("noBtn");
+
+    const yes = document.getElementById("yesBtn");
+    const msg = document.getElementById("finalMsg");
+    const overlay = document.getElementById("yesOverlay");
+    const banner = document.getElementById("banner");
+
+    yes.addEventListener("click", () => {
+      Valentine.setYes();
+      yes.disabled = true;
+
+      overlay.classList.add("on");
+      banner.classList.add("on");
+      Valentine.confettiHearts(yes, 38);
+
+      Valentine.fireworksBurst(yes);
+      setTimeout(() => Valentine.fireworksBurst(yes), 220);
+      setTimeout(() => Valentine.fireworksBurst(yes), 440);
+
+      const typeEl = document.getElementById("typeLine");
+      Valentine.typewriter(
+        typeEl,
+        "It’s official.\nYou’re my Valentine now. I love you baby 💜😘",
+        24
+      );
+
+      Valentine.shockwave(yes);
+      Valentine.heartRain(3200);
+
+      document.querySelector(".card")?.classList.add("yesGlow");
+      document.querySelector(".photo")?.classList.add("yesGlow");
+      setTimeout(() => {
+        document.querySelector(".card")?.classList.remove("yesGlow");
+        document.querySelector(".photo")?.classList.remove("yesGlow");
+      }, 1300);
+
+      msg.style.display = "block";
+      msg.classList.add("show");
+      msg.scrollIntoView({ behavior: "smooth", block: "center" });
+
+      setTimeout(() => {
+        overlay.classList.remove("on");
+        banner.classList.remove("on");
+        localStorage.removeItem("julissaYes");
+        yes.disabled = false;
+      }, 5000);
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
