@@ -459,6 +459,42 @@ hr{
 
 .candy, .dots{ display:none !important; }
 
+/* =========================
+   DATE PAGE ORGANIZER ONLY
+   (affects only date.html if it uses these classes)
+========================= */
+
+.dateGrid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: stretch;
+}
+.dateGrid .full{ grid-column: 1 / -1; }
+
+@media (max-width: 980px){
+  .dateGrid{ grid-template-columns: 1fr; }
+  .dateGrid .full{ grid-column: auto; }
+}
+
+/* Make tiles feel consistent and less “random” */
+.dateGrid .tile{
+  min-height: 110px;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Food/photo card matches everything */
+.foodCard{
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.foodCard .photo{ margin-top: 10px; }
+
+
 /* ===== YES: extra effects ===== */
 
 /* Shockwave ring */
