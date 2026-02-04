@@ -79,6 +79,7 @@
 
     yes.addEventListener("click", () => {
       Valentine.setYes();
+      localStorage.setItem("julissaAccepted", "1");
       yes.disabled = true;
 
       overlay.classList.add("on");
