@@ -165,77 +165,80 @@
           <div id="unlockedView" style="display:none;">
             <div class="dateGrid">
 
-            <span class="seeYou full" id="seeYou">See you at 7:30 💞</span>
+              <!-- 1) COUNTDOWN TITLE + BOXES FIRST -->
+              <div class="full">
+                <hr />
 
-            <div class="list full" style="margin-top:14px;">
-              <div class="tile">
-                <b>📅 When</b>
-                <span>Friday, February 13, 2026</span>
-              </div>
-              
-              <div class="tile">
-                <b>⏰ Time</b>
-                <span>7:30 PM</span>
-              </div>
+                <h2>Countdown</h2>
+                <p style="margin-bottom:8px;">Until our date night starts.</p>
 
-              <!-- FOOD PHOTO -->
-<aside class="side full foodCard">
-  <div class="kicker">Dinner vibes</div>
-  <div class="photo">
-    <img src="food.jpg" alt="Dinner at Moxies">
-  </div>
-  <div class="small">
-    This isn't from the restaurant I just wanted a food pic that look cute lol
-  </div>
-</aside>
-
-              <div class="tile">
-                <b>📍 Where</b>
-                <span>
-                  Moxies – Washington, DC<br>
-                  <a href="https://moxies.com/restaurants/washingtondc/"
-                     target="_blank"
-                     style="text-decoration:none; font-weight:700; color:#ff2d6d;">
-                    (Tap for location)
-                  </a>
-                </span>
+                <div class="countdown" aria-live="polite">
+                  <div class="cdBox"><div class="cdNum" id="cdDays">—</div><div class="cdLab">Days</div></div>
+                  <div class="cdBox"><div class="cdNum" id="cdHours">—</div><div class="cdLab">Hours</div></div>
+                  <div class="cdBox"><div class="cdNum" id="cdMins">—</div><div class="cdLab">Mins</div></div>
+                  <div class="cdBox"><div class="cdNum" id="cdSecs">—</div><div class="cdLab">Secs</div></div>
+                </div>
               </div>
 
-              <div class="tile">
-                <b>✨ The Plan</b>
-                <span>
-                  We eat, we laugh, and we just get to be with one another, I love you mi vida 💜😘
-                </span>
+              <!-- 2) FOOD NEXT -->
+              <aside class="side full foodCard" style="margin-top:16px;">
+                <div class="kicker">Dinner vibes</div>
+                <div class="photo">
+                  <img src="food.jpg" alt="Dinner at Moxies">
+                </div>
+                <div class="small">
+                  This isn't from the restaurant I just wanted a food pic that look cute lol
+                </div>
+              </aside>
+
+              <!-- 3) DATE TILES AFTER FOOD -->
+              <div class="list full" style="margin-top:14px;">
+                <div class="tile">
+                  <b>📅 When</b>
+                  <span>Friday, February 13, 2026</span>
+                </div>
+
+                <div class="tile">
+                  <b>⏰ Time</b>
+                  <span>7:30 PM</span>
+                </div>
+
+                <div class="tile">
+                  <b>📍 Where</b>
+                  <span>
+                    Moxies – Washington, DC<br>
+                    <a href="https://moxies.com/restaurants/washingtondc/"
+                       target="_blank"
+                       style="text-decoration:none; font-weight:700; color:#ff2d6d;">
+                      (Tap for location)
+                    </a>
+                  </span>
+                </div>
+
+                <div class="tile">
+                  <b>✨ The Plan</b>
+                  <span>
+                    We eat, we laugh, and we just get to be with one another, I love you mi vida 💜😘
+                  </span>
+                </div>
               </div>
-            </div>
 
-            <div class="full">
-  <hr />
+              <!-- 4) SEE YOU AFTER TILES -->
+              <span class="seeYou full" id="seeYou" style="margin-top:18px;">See you at 7:30 💞</span>
 
-  <h2>Countdown</h2>
-  <p style="margin-bottom:8px;">Until our date night starts.</p>
+              <!-- 5) BOTTOM MESSAGE -->
+              <div class="bottomLove">
+                I’m not just excited for the date… I’m excited that it’s with you.
+                See you then, beautiful.
+              </div>
 
-  <div class="countdown" aria-live="polite">
-    <div class="cdBox"><div class="cdNum" id="cdDays">—</div><div class="cdLab">Days</div></div>
-    <div class="cdBox"><div class="cdNum" id="cdHours">—</div><div class="cdLab">Hours</div></div>
-    <div class="cdBox"><div class="cdNum" id="cdMins">—</div><div class="cdLab">Mins</div></div>
-    <div class="cdBox"><div class="cdNum" id="cdSecs">—</div><div class="cdLab">Secs</div></div>
-  </div>
+              <!-- 6) BACK BUTTON -->
+              <div class="actions" style="margin-top:14px;">
+                <a href="index.html" class="btn ghost">Back to the beginning</a>
+              </div>
 
-  <div class="bottomLove">
-    I’m not just excited for the date… I’m excited that it’s with you.
-    See you then, beautiful.
-  </div>
-
-  <div class="actions" style="margin-top:14px;">
-    <a href="index.html" class="btn ghost">Back to the beginning</a>
-</div>
-
-</div> <!-- closes dateGrid -->
-</div> <!-- closes unlockedView -->
-
-            </div>
-          </div>
+            </div> <!-- closes dateGrid -->
+          </div> <!-- closes unlockedView -->
 
         </div>
       </section>
@@ -292,3 +295,4 @@
   </script>
 </body>
 </html>
+
